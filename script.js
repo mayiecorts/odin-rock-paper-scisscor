@@ -67,8 +67,7 @@ const startGame = (playerBet) => {
   const playerSelection = playerBet.toUpperCase();
     const computerSelection = getComputerChoice(Math.floor(Math.random() * 3)); //Getting the computer selection randomly
 
-    //Calling the playRound function to pass the player and computer selection
-    playRound(playerSelection, computerSelection);
+  animation(playerSelection, computerSelection);
 
     //Increment the score of the winner each round
     (computerSelection === "ROCK" && playerSelection === "PAPER") ||
