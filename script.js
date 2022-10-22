@@ -2,6 +2,12 @@
 let playerScore = 0;
 let computerScore = 0;
 
+const buttons = document.querySelector("button");
+const pScore = document.querySelector("#pScore");
+const cScore = document.querySelector("#cScore");
+const result = document.querySelector(".resultText");
+const playerHand = document.querySelector("#playerHand");
+const computerHand = document.querySelector("#computerHand");
 //Function to check who wins each round
 const playRound = (playerSelection, computerSelection) => {
   computerSelection === "ROCK" && playerSelection === "PAPER"
