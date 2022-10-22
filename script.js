@@ -63,9 +63,8 @@ const getComputerChoice = (result) =>
   result === 0 ? "ROCK" : result === 1 ? "PAPER" : "SCISSOR";
 
 //Function to start the game
-const startGame = () => {
-  for (let i = 0; i < 5; i++) {
-    const playerSelection = prompt("Place your bet, Player!").toUpperCase();
+const startGame = (playerBet) => {
+  const playerSelection = playerBet.toUpperCase();
     const computerSelection = getComputerChoice(Math.floor(Math.random() * 3)); //Getting the computer selection randomly
 
     //Calling the playRound function to pass the player and computer selection
