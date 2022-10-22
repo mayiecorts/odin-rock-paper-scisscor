@@ -1,4 +1,4 @@
-//Initializing the laer and computer score
+//Initializing the player and computer score
 let playerScore = 0;
 let computerScore = 0;
 
