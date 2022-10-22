@@ -19,6 +19,27 @@ const reset = () => {
   playerHand.src = "./assets/rock.svg";
   computerHand.src = "./assets/rock.svg";
 };
+
+//Play animation after player selection
+const animation = (player, computer) => {
+  document.getElementById("computerHand").className = "computerHand";
+  document.getElementById("playerHand").className = "playerHand";
+
+  setTimeout(() => {
+    document.getElementById("computerHand").className = "";
+    document.getElementById("playerHand").className = "";
+
+    player === "ROCK" && (playerHand.src = "./assets/rock.svg");
+    player === "PAPER" && (playerHand.src = "./assets/paper.svg");
+    player === "SCISSOR" && (playerHand.src = "./assets/scissor.svg");
+    computer === "ROCK" && (computerHand.src = "./assets/rock.svg");
+    computer === "PAPER" && (computerHand.src = "./assets/paper.svg");
+    computer === "SCISSOR" && (computerHand.src = "./assets/scissor.svg");
+  }, 500);
+
+  //Calling the playRound function to pass the player and computer selection
+  playRound(player, computer);
+};
 //Function to check who wins each round
 const playRound = (playerSelection, computerSelection) => {
   computerSelection === "ROCK" && playerSelection === "PAPER"
