@@ -9,9 +9,50 @@
     <title>Document</title>
   </head>
   <body>
-    <h2>Rock, Paper, & Scissor</h2>
-    <h4 id="computerScore">Computer Score:</h4>
-    <h4 id="playerScore">Player Score:</h4>
-    <script src="script.js"></script>
+    <div class="container">
+      <h1 class="title">Rock, Paper, & Scissor</h1>
+      <div class="scores">
+        <div class="playerScore">
+          <h3>PLAYER SCORE</h3>
+          <h2 id="pScore"></h2>
+        </div>
+        <h1 class="resultText">RESULT</h1>
+        <div class="computerScore">
+          <h3>COMPUTER SCORE</h3>
+          <h2 id="cScore"></h2>
+        </div>
+      </div>
+      <div class="result">
+        <div class="player">
+          <img id="playerHand" src="./assets/rock.svg" alt="rock" />
+        </div>
+        <div class="computer">
+          <img id="computerHand" src="./assets/rock.svg" alt="rock" />
+        </div>
+      </div>
+      <div class="buttons">
+        <div class="rock">
+          <button value="rock" onclick="startGame(this.value)">
+            <img src="./assets/rock.svg" alt="rock" />
+          </button>
+          <p>Rock</p>
+        </div>
+        <div class="paper">
+          <button value="paper" onclick="startGame(this.value)">
+            <img src="./assets/paper.svg" alt="paper" />
+          </button>
+          <p>Paper</p>
+        </div>
+        <div class="scissor">
+          <button value="scissor" onclick="startGame(this.value)">
+            <img src="./assets/scissor.svg" alt="scissor" />
+          </button>
+          <p>Scissor</p>
+        </div>
+      </div>
+      <div class="reset">
+        <button onclick="reset()">RESET</button>
+      </div>
+    </div>
   </body>
 </html>
