@@ -8,6 +8,17 @@ const cScore = document.querySelector("#cScore");
 const result = document.querySelector(".resultText");
 const playerHand = document.querySelector("#playerHand");
 const computerHand = document.querySelector("#computerHand");
+
+//Function to reset the game & score
+const reset = () => {
+  playerScore = 0;
+  computerScore = 0;
+  cScore.textContent = playerScore;
+  pScore.textContent = computerScore;
+
+  playerHand.src = "./assets/rock.svg";
+  computerHand.src = "./assets/rock.svg";
+};
 //Function to check who wins each round
 const playRound = (playerSelection, computerSelection) => {
   computerSelection === "ROCK" && playerSelection === "PAPER"
