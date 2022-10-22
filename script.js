@@ -40,23 +40,22 @@ const animation = (player, computer) => {
   //Calling the playRound function to pass the player and computer selection
   playRound(player, computer);
 };
+
 //Function to check who wins each round
 const playRound = (playerSelection, computerSelection) => {
   computerSelection === "ROCK" && playerSelection === "PAPER"
-    ? console.log("You win! Paper beats Rock.")
+    ? (result.textContent = "PLAYER WINS!")
     : computerSelection === "PAPER" && playerSelection === "SCISSOR"
-    ? console.log("You win! Scissor beats Paper.")
+    ? (result.textContent = "PLAYER WINS!")
     : computerSelection === "SCISSOR" && playerSelection === "ROCK"
-    ? console.log("You win! Rock beats Scissor.")
+    ? (result.textContent = "PLAYER WINS!")
     : playerSelection === "ROCK" && computerSelection === "PAPER"
-    ? console.log("You lose! Paper beats Rock.")
+    ? (result.textContent = "COMPUTER WINS!")
     : playerSelection === "PAPER" && computerSelection === "SCISSOR"
-    ? console.log("You lose! Scissor beats Paper.")
+    ? (result.textContent = "COMPUTER WINS!")
     : playerSelection === "SCISSOR" && computerSelection === "ROCK"
-    ? console.log("You lose! Rock beats Scissor.")
-    : computerSelection === playerSelection
-    ? console.log("Draw!")
-    : console.log("Please choose either Rock, Paper, or Scissor.");
+    ? (result.textContent = "COMPUTER WINS!")
+    : (result.textContent = "DRAW!");
 };
 
 //Function where the result of computer selection should be pass
