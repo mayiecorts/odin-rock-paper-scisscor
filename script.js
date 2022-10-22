@@ -79,22 +79,8 @@ const startGame = (playerBet) => {
       : computerScore++;
 
     //Log the scores each round
-    console.log(
-      `Player Score: ${playerScore}\nComputer Score: ${computerScore}`
-    );
-  }
-
-  //Check the final score after 5 rounds and announce the winner
-  playerScore > computerScore &&
-    console.log(
-      `The player final score is ${playerScore} while computer final score is ${computerScore}. PLAYER WINS!`
-    );
-  playerScore < computerScore &&
-    console.log(
-      `The player final score is ${playerScore} while computer final score is ${computerScore}. COMPUTER WINS!`
-    );
-  playerScore === computerScore &&
-    console.log("The result of the game is a TIE!");
+  cScore.textContent = computerScore;
+  pScore.textContent = playerScore;
 };
 
 //Calling the startGame function to begin the game
