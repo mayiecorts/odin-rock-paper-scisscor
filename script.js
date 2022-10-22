@@ -65,23 +65,20 @@ const getComputerChoice = (result) =>
 //Function to start the game
 const startGame = (playerBet) => {
   const playerSelection = playerBet.toUpperCase();
-    const computerSelection = getComputerChoice(Math.floor(Math.random() * 3)); //Getting the computer selection randomly
+  const computerSelection = getComputerChoice(Math.floor(Math.random() * 3)); //Getting the computer selection randomly
 
   animation(playerSelection, computerSelection);
 
-    //Increment the score of the winner each round
-    (computerSelection === "ROCK" && playerSelection === "PAPER") ||
-    (computerSelection === "PAPER" && playerSelection === "SCISSOR") ||
-    (computerSelection === "SCISSOR" && playerSelection === "ROCK")
-      ? playerScore++
-      : computerSelection === playerSelection
-      ? playerScore + 0 && computerScore + 0
-      : computerScore++;
+  //Increment the score of the winner each round
+  (computerSelection === "ROCK" && playerSelection === "PAPER") ||
+  (computerSelection === "PAPER" && playerSelection === "SCISSOR") ||
+  (computerSelection === "SCISSOR" && playerSelection === "ROCK")
+    ? playerScore++
+    : computerSelection === playerSelection
+    ? playerScore + 0 && computerScore + 0
+    : computerScore++;
 
-    //Log the scores each round
+  //Log the scores each round
   cScore.textContent = computerScore;
   pScore.textContent = playerScore;
 };
-
-//Calling the startGame function to begin the game
-startGame();
