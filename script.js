@@ -28,6 +28,8 @@ const reset = () => {
 const animation = (player, computer) => {
   document.getElementById("computerHand").className = "computerHand";
   document.getElementById("playerHand").className = "playerHand";
+  playerHand.src = "./assets/rock.svg";
+  computerHand.src = "./assets/rock.svg";
 
   setTimeout(() => {
     document.getElementById("computerHand").className = "";
