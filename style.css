@@ -91,30 +91,56 @@ img {
 }
 
 .playerHand {
-    animation: player 0.3s infinite alternate;
+    animation: player 1s infinite alternate;
+    transform: rotate(5deg);
 }
 
 .computerHand {
-    animation: computer 0.3s infinite alternate;
+    animation: computer 1s infinite alternate;
+    transform: rotate(360deg) scaleY(1);
 }
 
 @keyframes player {
     0% {
-        transform: translateY(0) rotate(5deg);
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(40px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(40px);
     }
 
     100% {
-        transform: translateY(-10px) rotate(5deg);
+        transform: translateY(-10px);
     }
 }
 
 @keyframes computer {
     0% {
-        transform: translateY(0) rotate(360deg) scaleY(1);
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(40px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(40px);
     }
 
     100% {
-        transform: translateY(-10px) rotate(360deg) scaleY(1);
+        transform: translateY(-10px);
     }
 }
 
