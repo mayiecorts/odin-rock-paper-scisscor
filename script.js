@@ -9,6 +9,9 @@ const result = document.querySelector(".resultText");
 const playerHand = document.querySelector("#playerHand");
 const computerHand = document.querySelector("#computerHand");
 
+cScore.textContent = computerScore;
+pScore.textContent = playerScore;
+
 //Function to reset the game & score
 const reset = () => {
   playerScore = 0;
