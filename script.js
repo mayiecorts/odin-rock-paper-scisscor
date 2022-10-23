@@ -41,7 +41,7 @@ const animation = (player, computer) => {
     computer === "ROCK" && (computerHand.src = "./assets/rock.svg");
     computer === "PAPER" && (computerHand.src = "./assets/paper.svg");
     computer === "SCISSOR" && (computerHand.src = "./assets/scissor.svg");
-  }, 500);
+  }, 1000);
 
   //Calling the playRound function to pass the player and computer selection
   playRound(player, computer);
@@ -49,31 +49,21 @@ const animation = (player, computer) => {
 
 //Function to check who wins each round
 const playRound = (playerSelection, computerSelection) => {
-  computerSelection === "ROCK" && playerSelection === "PAPER"
-    ? (result.textContent = "PLAYER WINS!")
-    : computerSelection === "PAPER" && playerSelection === "SCISSOR"
-    ? (result.textContent = "PLAYER WINS!")
-    : computerSelection === "SCISSOR" && playerSelection === "ROCK"
-    ? (result.textContent = "PLAYER WINS!")
-    : playerSelection === "ROCK" && computerSelection === "PAPER"
-    ? (result.textContent = "COMPUTER WINS!")
-    : playerSelection === "PAPER" && computerSelection === "SCISSOR"
-    ? (result.textContent = "COMPUTER WINS!")
-    : playerSelection === "SCISSOR" && computerSelection === "ROCK"
-    ? (result.textContent = "COMPUTER WINS!")
-    : (result.textContent = "DRAW!");
-};
-
-//Function where the result of computer selection should be pass
-const getComputerChoice = (result) =>
-  result === 0 ? "ROCK" : result === 1 ? "PAPER" : "SCISSOR";
-
-//Function to start the game
-const startGame = (playerBet) => {
-  const playerSelection = playerBet.toUpperCase();
-  const computerSelection = getComputerChoice(Math.floor(Math.random() * 3)); //Getting the computer selection randomly
-
-  animation(playerSelection, computerSelection);
+  setTimeout(() => {
+    computerSelection === "ROCK" && playerSelection === "PAPER"
+      ? (result.textContent = "PLAYER WINS!")
+      : computerSelection === "PAPER" && playerSelection === "SCISSOR"
+      ? (result.textContent = "PLAYER WINS!")
+      : computerSelection === "SCISSOR" && playerSelection === "ROCK"
+      ? (result.textContent = "PLAYER WINS!")
+      : playerSelection === "ROCK" && computerSelection === "PAPER"
+      ? (result.textContent = "COMPUTER WINS!")
+      : playerSelection === "PAPER" && computerSelection === "SCISSOR"
+      ? (result.textContent = "COMPUTER WINS!")
+      : playerSelection === "SCISSOR" && computerSelection === "ROCK"
+      ? (result.textContent = "COMPUTER WINS!")
+      : (result.textContent = "DRAW!");
+  }, 1000);
 
   //Increment the score of the winner each round
   (computerSelection === "ROCK" && playerSelection === "PAPER") ||
