@@ -18,6 +18,7 @@ const reset = () => {
   computerScore = 0;
   cScore.textContent = playerScore;
   pScore.textContent = computerScore;
+  result.textContent = "RESULT";
 
   playerHand.src = "./assets/rock.svg";
   computerHand.src = "./assets/rock.svg";
