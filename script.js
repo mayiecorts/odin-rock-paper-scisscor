@@ -88,3 +88,15 @@ const startGame = (playerBet) => {
   cScore.textContent = computerScore;
   pScore.textContent = playerScore;
 };
+
+//Function where the result of computer selection should be pass
+const getComputerChoice = (result) =>
+  result === 0 ? "ROCK" : result === 1 ? "PAPER" : "SCISSOR";
+
+//Function to start the game
+const startGame = (playerBet) => {
+  const playerSelection = playerBet.toUpperCase();
+  const computerSelection = getComputerChoice(Math.floor(Math.random() * 3)); //Getting the computer selection randomly
+
+  animation(playerSelection, computerSelection);
+};
